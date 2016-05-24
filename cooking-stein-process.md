@@ -1,13 +1,17 @@
 
-Coding on Android
+Cooking with Android OS
 =====
 
-General coding style for Android development. This handbook is based on my personal experience and any responsibility on your own apps I can not grantee. Think about something wealth from this article and filter out what you need in your code.
+The "cooking stein/process" for Android development. This handbook is based on my personal experience and any responsibility on your own apps I can not grantee. Think about something wealth from this article and filter out what you need in your code base.
+
+###### Software-Dev on Android OS is still difficult as we thing, however is better than we thought. We need pattern and safe tools and general process. Avoid complex instead by simple coding. Users care only on app's features, ***NOT YOUR CODE***.
+
+Try these, you might ease your development on Android.
 
 - MVC programming
  - [Activity](https://developer.android.com/reference/android/app/Activity.html) as controller
  - [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html) as view
- - Models with [POJO](https://en.wikipedia.org/wiki/Plain_Old_Java_Object) organized.
+ - Models with [POJO](https://en.wikipedia.org/wiki/Plain_Old_Java_Object) organized. Don't use more than 2 collections in your class.
 
 - Data persistence
   - [SharePreference](https://developer.android.com/reference/android/content/SharedPreferences.html)
@@ -40,13 +44,24 @@ General coding style for Android development. This handbook is based on my perso
   - When using [AsyncTask](https://developer.android.com/reference/android/os/AsyncTask.html) please call [AsyncTaskCompat](https://developer.android.com/reference/android/support/v4/os/AsyncTaskCompat.html) to fire it.
   - Using [WeakReference](https://developer.android.com/reference/java/lang/ref/WeakReference.html) for [Activity](https://developer.android.com/reference/android/app/Activity.html)  or [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html).
 
-- App robust
+- Compat library
+  There are so many methods and classes defined in v4-v13 libraries that can help us.
+    - Use [ViewCompat](https://developer.android.com/reference/android/support/v4/view/ViewCompat.html) to create [ViewPropertyAnimator](https://developer.android.com/reference/android/view/ViewPropertyAnimator.html).
+    - Use [ViewStubCompat](https://android.googlesource.com/platform/frameworks/support/+/1949ae9aeaadf52ad7bd7bb74ca5419c67ea7f65/v7/appcompat/src/android/support/v7/internal/widget/ViewStubCompat.java).
+    - Use [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html) instead ListView.
+- Robust
+  - Avoid boxing and unboxing.
+    - Integer, Double, Float, Boolean should not be parameter normally.
+    - Use [Android v4 collections](https://developer.android.com/reference/android/support/v4/util/package-summary.html?hl=zh-cn).
+  - Use [TextUtils](https://developer.android.com/reference/android/text/TextUtils.html) for strings-operations.
   - Less coupling, more events.
    - Listeners between equal-level components.
         - Example: [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html)  between [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html)  by using [setTargetFragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html#setTargetFragment(android.support.v4.app.Fragment, int)).
     - Don't forget to use *instance-of* to check [getTargetFragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html#getTargetFragment()).
     - Try to avoid listeners between  [Activity](https://developer.android.com/reference/android/app/Activity.html)  and  [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html). There's [standard pattern](https://developer.android.com/training/basics/fragments/communicating.html) of Google how  [Activity](https://developer.android.com/reference/android/app/Activity.html) communicates with  [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html) each-other.
-  - More than **three** listeners means there's a  coupling problem between components. The best way to solve it is by using [Event-Bus](https://github.com/greenrobot/EventBus).
+    - More than **three** listeners means there's a  coupling problem between components. The best way to solve it is by using [Event-Bus](https://github.com/greenrobot/EventBus).
+    - [Example with listener: SettingHeadersFragment vs. SettingContentFragment](https://github.com/XinyueZ/preference-demo/tree/master/preference-fragment-comapt/app/src/main/java/com/demo/preference/app/fragments)
+    - [With event-bus: de-coupling from fragment-animation and other activity](https://github.com/XinyueZ/animsample/blob/master/app/src/main/java/com/animsample/TwoSidesFramesActivity.java#L160).
   - When app runs background, no-refresh on [View](https://developer.android.com/reference/android/view/View.html) although your objects might handle it with  [WeakReference](https://developer.android.com/reference/java/lang/ref/WeakReference.html).
   - Using v4, v7, v8, even "play-service" library or other "compat" libraries to
     - Start [Activity](https://developer.android.com/reference/android/app/Activity.html)
@@ -54,4 +69,11 @@ General coding style for Android development. This handbook is based on my perso
     - Start [Loader API ](https://developer.android.com/guide/components/loaders.html)
     - Start [ResultReceiver](https://github.com/futuresimple/android-support-v4/blob/master/src/java/android/support/v4/os/ResultReceiver.java).
     - etc.
-  - No more [NineOldAndroid](https://github.com/JakeWharton/NineOldAndroids), it's time to begin even with Android 4.1 as basic or more.
+  - No more [NineOldAndroid](https://github.com/JakeWharton/NineOldAndroids), it's time to begin even with Android 4.1 as basic or higher.
+  - Use runtime-permission when you need. Don't allow permissions on splash or at app-enter-point. Try library [permission-dispatcher](https://github.com/hotchemi/PermissionsDispatcher).
+  - Use [data-binding](https://www.google.de/?ion=1&espv=2#q=android%20databinding), not [Butter Knife](http://jakewharton.github.io/butterknife/), instead findViewById to get views.
+  - In "callback"s should check if component "null" or not.
+           	    Activity activity = getActivity();
+	               if(activity!=null) {
+                   //Check in fragment for some listeners.
+                 }
