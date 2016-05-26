@@ -54,8 +54,12 @@ Try these, you might ease your development on Android.
     - [Example with listener: SettingHeadersFragment vs. SettingContentFragment](https://github.com/XinyueZ/preference-demo/tree/master/preference-fragment-comapt/app/src/main/java/com/demo/preference/app/fragments)
     - [With event-bus: de-coupling from fragment-animation and other activity](https://github.com/XinyueZ/animsample/blob/master/app/src/main/java/com/animsample/TwoSidesFramesActivity.java#L160).
 - De-coupling tools:
-  - Use [Event-Bus](https://github.com/greenrobot/EventBus) to establish communication between components like [Activity](https://developer.android.com/reference/android/app/Activity.html),  [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html) or [Service](https://developer.android.com/reference/android/app/Service.html) etc. It's the relationship between "same level" things or host and guest relation.
-  - Use [RxAndroid](https://github.com/ReactiveX/RxAndroid)  to connect background data and foreground receivers. It's the a subordinate relationship, from back to front, from bottom to top.
+  - Use [Event-Bus](https://github.com/greenrobot/EventBus)
+    - To establish communication between components like [Activity](https://developer.android.com/reference/android/app/Activity.html),  [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html) or [Service](https://developer.android.com/reference/android/app/Service.html) etc. It's the relationship between "same level" things or host and guest relation.
+    - Save listeners(class fielders), save ```setXXXXListeners```, save ```listener!=null or xxx instanceOf``` before calling ```listener.onXXXX```, save more codes.
+  - Use [RxAndroid](https://github.com/ReactiveX/RxAndroid)  
+    - To connect background data and foreground receivers. It's the a subordinate relationship, from back to front, from bottom to top.
+    - Make channel between data-stream, lost nothing.
 
 - Compat library
   There are so many methods and classes defined in v4-v13 libraries that can help us.
