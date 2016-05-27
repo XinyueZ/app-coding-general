@@ -84,6 +84,7 @@ Try these, you might ease your development on Android.
 - Robust
   - Inspect your code always!
     ![1-4](/media/code-inspect.png)
+
         [1-4] Code inspect menu in Android Studio
   - Avoid boxing and unboxing.
     - Integer, Double, Float, Boolean should not be parameter normally.
