@@ -79,6 +79,7 @@ Try these, you might ease your development on Android.
     - Use [ViewCompat](https://developer.android.com/reference/android/support/v4/view/ViewCompat.html) to create [ViewPropertyAnimator](https://developer.android.com/reference/android/view/ViewPropertyAnimator.html).
     - Use [ViewStubCompat](https://android.googlesource.com/platform/frameworks/support/+/1949ae9aeaadf52ad7bd7bb74ca5419c67ea7f65/v7/appcompat/src/android/support/v7/internal/widget/ViewStubCompat.java).
     - Use [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html) instead ListView.
+      - Use simple layout as item's root,i.e [FrameLayout](https://developer.android.com/reference/android/widget/FrameLayout.html),[LinearLayout](https://developer.android.com/reference/android/widget/LinearLayout.html); don't use [RelativeLayout](https://developer.android.com/reference/android/widget/RelativeLayout.html) which can be converted to simple layout.
       - Use [CardView](https://developer.android.com/reference/android/support/v7/widget/CardView.html) as items.
       - Define [divide(A sample DividerDecoration)](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/master/v7/preference/src/android/support/v7/preference/PreferenceFragmentCompat.java) like ListView but a little "complex".
 - Robust
