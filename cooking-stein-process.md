@@ -38,6 +38,9 @@ Try these, you might ease your development on Android.
       - Very compatible with [gson](https://github.com/google/gson).
       - [Simple and less coding](http://square.github.io/retrofit/).
   - [Glide](https://www.google.de/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&ved=0ahUKEwjPstuAgfHMAhWIbRQKHXODDygQFggdMAA&url=https%3A%2F%2Fgithub.com%2Fbumptech%2Fglide&usg=AFQjCNHZ_1a6kVBhhXyyVxpVvJaRrbqnZQ&sig2=gFc6rzMJv0ppUEmz2fKvAA) as "Image-Loader" .
+    - Easy to scale image local.
+    - Local first as loading.
+    - More faster than any other :)
 
 - Async, sync, background.
   - Small job: Use [Loader API ](https://developer.android.com/guide/components/loaders.html) in [Activity](https://developer.android.com/reference/android/app/Activity.html)  or [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html) instead [AsyncTask](https://developer.android.com/reference/android/os/AsyncTask.html).
