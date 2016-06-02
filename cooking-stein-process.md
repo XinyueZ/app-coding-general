@@ -12,6 +12,7 @@ Try these, you might ease your development on Android.
  - [Activity](https://developer.android.com/reference/android/app/Activity.html) as controller
  - [Fragment](https://developer.android.com/reference/android/support/v4/app/Fragment.html) as view
  - Models with [POJO](https://en.wikipedia.org/wiki/Plain_Old_Java_Object) organized. Don't use more than 2 collections in your class.
+- Use [data-binding](https://developer.android.com/topic/libraries/data-binding/index.html) to show data.
 
 - Data persistence
   - [SharePreference](https://developer.android.com/reference/android/content/SharedPreferences.html)
