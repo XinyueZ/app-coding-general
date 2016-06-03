@@ -2,7 +2,7 @@
 Cooking with Android OS
 =====
 
-The "cooking handbook" for Android development. This handbook is based on my personal experience and any responsibility on your own apps I can not grantee. Think about something wealth from this article and filter out what you need in your code base.
+The "cooking handbook" for Android development. This handbook is based on my personal experience and any responsibility on your own apps I ensure yet. Think about something wealth from this article and filter out what you need in your code base.
 
 ###### Software-Dev on Android OS is still difficult as we thing, however is better than we thought. We need pattern and safe tools and general process. Avoid complex instead by simple coding. Users care only on app's features, ***NOT YOUR CODE***.
 
