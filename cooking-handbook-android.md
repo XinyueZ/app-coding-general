@@ -114,10 +114,14 @@ Try these, you might ease your development on Android.
   - Use runtime-permission when you need. Don't allow permissions on splash or at app-enter-point. Try library [permission-dispatcher](https://github.com/hotchemi/PermissionsDispatcher).
   - Use [data-binding](https://www.google.de/?ion=1&espv=2#q=android%20databinding), not [Butter Knife](http://jakewharton.github.io/butterknife/), instead findViewById to get views.
   - In "callback"s should check if component "null" or not.
+    - Get activity in fragment:
+
                  Activity activity = getActivity();
 	               if(activity!=null) {
                    //Check in fragment for some listeners.
                  }
+
+   - Get view in fragment:
 
                  //Outside onViewCreated and associated called functions, all other methods must do.
                  View v = getView();
@@ -128,3 +132,6 @@ Try these, you might ease your development on Android.
   - [Android Summit 2015](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc_Tt7q77qwyKRgytF1RzRx8)
   - [IO 2016 Android sessions](https://www.youtube.com/playlist?list=PLWz5rJ2EKKc8jQTUYvIfqA9lMvSGQWtte)
   - [Android Performance Patterns](https://www.youtube.com/playlist?list=PLOU2XLYxmsIKEOXh5TwZEv89aofHzNCiu)
+- Best App with Material Style
+  - [topeka](https://github.com/googlesamples/android-topeka)
+  - [plaid](https://github.com/nickbutcher/plaid)
