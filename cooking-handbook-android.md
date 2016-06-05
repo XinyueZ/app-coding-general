@@ -77,6 +77,7 @@ Try these, you might ease your development on Android.
   - Use [RxAndroid](https://github.com/ReactiveX/RxAndroid)  
     - To connect background data and foreground receivers. It's the a subordinate relationship, from back to front, from bottom to top.
     - Make channel between data-stream, lost nothing.
+  - Use [Agera](https://github.com/google/agera) for Rx-programming, because the project is official. However it is still in Beta.
 
 - Compat library
   There are so many methods and classes defined in v4-v13 libraries that can help us.
