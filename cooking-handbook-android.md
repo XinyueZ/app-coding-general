@@ -136,3 +136,6 @@ Try these, you might ease your development on Android.
 - Best App with Material Style
   - [topeka](https://github.com/googlesamples/android-topeka)
   - [plaid](https://github.com/nickbutcher/plaid)
+- Code sample:
+  -[Preference with compat](https://github.com/XinyueZ/preference-demo)
+  -[ViewPropertyAnimator and ObjectAnimator](https://github.com/XinyueZ/animsample)
