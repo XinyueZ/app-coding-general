@@ -88,9 +88,9 @@ Try these, you might ease your development on Android.
       - Define [divide(A sample DividerDecoration)](https://android.googlesource.com/platform/frameworks/support/+/refs/heads/master/v7/preference/src/android/support/v7/preference/PreferenceFragmentCompat.java) like ListView but a little "complex".
 - Robust
   - Inspect your code always!
-    ![1-4](/media/code-inspect.png)
+    ![1-5](/media/code-inspect.png)
 
-        [1-4] Code inspect menu in Android Studio
+        [1-5] Code inspect menu in Android Studio
   - Avoid boxing and unboxing.
     - Integer, Double, Float, Boolean should not be parameter normally.
     - Use [Android v4 collections](https://developer.android.com/reference/android/support/v4/util/package-summary.html?hl=zh-cn).
