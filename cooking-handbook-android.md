@@ -138,6 +138,6 @@ Try these, you might ease your development on Android.
   - [our-streets](https://github.com/googlesamples/android-ourstreets)
   - [unsplash](https://github.com/googlesamples/android-unsplash)
   - [plaid](https://github.com/nickbutcher/plaid)
-- Code sample:
-  -[Preference with compat](https://github.com/XinyueZ/preference-demo)
-  -[ViewPropertyAnimator and ObjectAnimator](https://github.com/XinyueZ/animsample)
+- Code sample
+  - [Preference with compat](https://github.com/XinyueZ/preference-demo)
+  - [ViewPropertyAnimator and ObjectAnimator](https://github.com/XinyueZ/animsample)
