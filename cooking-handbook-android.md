@@ -135,6 +135,8 @@ Try these, you might ease your development on Android.
   - [Android Performance Patterns](https://www.youtube.com/playlist?list=PLOU2XLYxmsIKEOXh5TwZEv89aofHzNCiu)
 - Best App with Material Style
   - [topeka](https://github.com/googlesamples/android-topeka)
+  - [our-streets](https://github.com/googlesamples/android-ourstreets)
+  - [unsplash](https://github.com/googlesamples/android-unsplash)
   - [plaid](https://github.com/nickbutcher/plaid)
 - Code sample:
   -[Preference with compat](https://github.com/XinyueZ/preference-demo)
